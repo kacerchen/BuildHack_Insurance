@@ -1,0 +1,68 @@
+<app-menu [currentAddr]="userAddr" [currentBalance]="balance" [changeAmount]="amount"></app-menu>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col box">
+      <h3 style="margin-bottom: 3%;">Enter your address to enroll an agricultural plan... <i class="fas fa-pen"></i></h3>
+      <form>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="block">Block</label>
+            <input type="text" class="form-control" id="block" placeholder="Block" value="223" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="village">Village</label>
+            <input type="text" class="form-control" id="village" placeholder="Village" value="Berkshire" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="district">District</label>
+            <input type="text" class="form-control" id="district" placeholder="District" value="12" required>            
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-3 mb-3">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="City" required>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" placeholder="State" required>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" id="country" placeholder="Country" required>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationDefault05">Zip</label>
+            <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="amount"><i class="fas fa-dollar-sign"></i> Amount to contribute</label>
+            <input [(ngModel)]="amount" [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="amount" placeholder="Enter coin amount" required>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline ratioStyle">
+            <input type="radio" id="basic" name="customRadioInline1" class="custom-control-input" [(ngModel)]="selectedPlan" value="basic" [ngModelOptions]="{standalone: true}">
+            <label class="custom-control-label" for="basic">Basic plan</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline ratioStyle">
+            <input type="radio" id="premium" name="customRadioInline1" class="custom-control-input" [(ngModel)]="selectedPlan" value="premium" [ngModelOptions]="{standalone: true}">
+            <label class="custom-control-label" for="premium"><i class="fas fa-crown"></i> Premium plan</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">
+              Check it to confirm you know you're enrolling an agricultural insurance.
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" (click)="join()">Join Now</button>
+      </form>
+      <div *ngIf="TxID" class="alert alert-success" style="margin-top: 3%;" role="alert">
+        <p>Enrolled successfully! Your Tx ID is: {{ TxID }} </p>
+      </div>
+    </div>
+  </div>
+</div>

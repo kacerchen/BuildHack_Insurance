@@ -1,0 +1,31 @@
+<!-- <nav class="navbar navbg">
+  <a class="navbar-brand" href="#">
+    <i class="fab fa-playstation"></i>
+  </a> -->
+
+  <ul class="nav nav-pills navbg">
+    <a class="navbar-brand" style="margin-left: 2%; color: aliceblue;" href="#">
+      <i class="fab fa-playstation"></i>
+      Insurance dApp
+    </a>
+    
+    <li class="nav-item">
+      <a class="nav-link linkColor" routerLink="/join" queryParamsHandling="merge">Join Pool</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle linkColor" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Account
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a class="dropdown-item" href="/signup"><i class="fas fa-user-plus"></i> Sign Up</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Address: {{currentAddr}}</a>
+        <a class="dropdown-item" href="#">Balance: {{currentBalance}}</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="btn btn-light" (click)="makeClaim()"><i class="fab fa-get-pocket"></i> Make Claim</button>
+    </li>
+  </ul>
+<!-- </nav> -->

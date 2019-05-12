@@ -1,24 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { PolicyListComponent } from './policy-list/policy-list.component';
-import { PolicyDetailsComponent } from './policy-details/policy-details.component';
 import { ClaimComponent } from './claim/claim.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MenuComponent } from './menu/menu.component';
+import { JoinPlanComponent } from './join-plan/join-plan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    PolicyListComponent,
-    PolicyDetailsComponent,
-    ClaimComponent
+    ClaimComponent,
+    MenuComponent,
+    JoinPlanComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
